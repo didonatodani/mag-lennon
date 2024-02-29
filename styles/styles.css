@@ -7,17 +7,32 @@ font-family: "Gabarito", sans-serif; */
 
 /* GENERAL STYLES */
 
+/* RESET */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* GENERAL WEBSITE STYLES */
+
 body{
-    background-color: rgb(253, 248, 244);
+    background-color: rgb(254, 251, 248);
 }
 
-h1, h2, h3{
+h1, h2, h3 {
     font-family: "Montserrat", sans-serif;
+}
+
+h1, h2{
+    color: #f52f20;
+    font-weight: bold;
+}
+
+h3{
+    font-style: italic;
+    font-size:larger;
 }
 
 p{
@@ -43,6 +58,7 @@ nav{
 .nav-link:hover{
     color: #f52f20;
 }
+
 .logo{
     width: 200px;
 }
@@ -51,6 +67,7 @@ nav{
 
 footer{
     padding: 2%;
+    background-color: rgb(253, 248, 244);
 }
 
 .socialMedia{
@@ -72,9 +89,14 @@ footer{
     font-family: "Montserrat", sans-serif;
     text-align: center;
 }
+.name{
+    color: #f52f20;
+    text-transform: uppercase;
+    font-weight: bold;
+}
 /* FOOTER STYLES END */
 
-/* SHOOTINGS STYLES START */
+/* SHOOTINGS PAGE STYLES START */
 
 /* GRID STYLE: MOBILE FIRST */
 .grid{
@@ -159,7 +181,6 @@ footer{
     .item01{
         grid-row: 1/3;
     }
-    
     .item02{
         grid-column: 2/4;
     }
@@ -167,7 +188,6 @@ footer{
         grid-row: 1/3;
         grid-column: 4/5;
     }
-    
     .item04{
         grid-row: 2/4;
     }
@@ -189,5 +209,67 @@ footer{
 
 /* MEDIA QUERIES END */
 
+/* OTHER PAGES' STYLES - NO ES PARTE DE LA SEGUNDA ENTREGA */
 
-/* SHOOTINGS STYLES */
+/* ABOUT PAGE STYLES BEGIN */
+.rowAbout{
+    padding: 15px 15px 0 15px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.fotoAbout{
+    background-image: url(../assets/magui.png);
+    height: 500px;
+    object-fit: cover;
+    background-position: bottom;
+}
+
+.textAbout{
+    padding: 10px;
+}
+
+.nameAbout{
+    text-transform: uppercase;
+}
+/* ABOUT PAGE STYLES END */
+
+/* PUBLICATIONS PAGE STYLES START */
+
+.rowPub{
+    display: flex;
+    justify-content: space-around;
+}
+.pub{
+    background-color: #f52f20;
+    height: 400px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 10px;
+}
+
+.pub p{
+   color: rgb(254, 251, 248);
+   text-transform: uppercase;
+}
+
+/* PUBLICATIONS PAGE STYLES END */
+
+/* MEDIA QUERIES:  */
+
+@media screen and (min-width: 960px) {
+    .rowAbout{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+
+    .fotoAbout{
+        height: 600px;
+        object-fit: cover;
+    }
+}
